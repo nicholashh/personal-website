@@ -8,9 +8,10 @@ this is the source code for my personal website!
 ### technologies:
 
 * platform: [Heroku](https://www.heroku.com/)
-* runtime: [Node.js](https://nodejs.org/en/)
+* runtime: [Node](https://nodejs.org/en/)
 * framework: [Express](http://expressjs.com/)
-* templating: [EJS](http://ejs.co/)
+* HTML templating: [EJS](http://ejs.co/)
+* CSS processing: [Less](http://lesscss.org/)
 
 ### originally created from:
 

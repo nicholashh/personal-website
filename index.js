@@ -1,17 +1,17 @@
 
-// dependencies
+// set-up dependencies
+
+var lessMiddleware = require('less-middleware');
 
 var express = require('express');
-
-// set-up
-
 var app = express();
 app.set('port', (process.env.PORT || 5000));
-app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
+app.use(lessMiddleware(__dirname + '/public')); // 1
+app.use(express.static(__dirname + '/public')); // 2
 
-// routing
+// routing information
 
 app.get('/', function(request, response) {
   response.render('pages/index');
