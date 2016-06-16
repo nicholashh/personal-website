@@ -1,7 +1,7 @@
 
 ## description
 
-this is the source code for my personal website!
+the source code for my personal website
 
 ## technical information
 
