@@ -25,8 +25,12 @@ app.get('/cv-resume', function(request, response) {
   response.render('pages/cv-resume');
 });
 
-app.get('/social-media', function(request, response) {
-  response.render('pages/social-media');
+app.get('/teaching', function(request, response) {
+  response.render('pages/teaching');
+});
+
+app.get('/contact-info', function(request, response) {
+  response.render('pages/contact-info');
 });
 
 // run the app
