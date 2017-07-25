@@ -17,21 +17,19 @@ app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
-app.get('/about-me', function(request, response) {
-  response.render('pages/about-me');
-});
-
-app.get('/cv-resume', function(request, response) {
-  response.render('pages/cv-resume');
-});
-
-app.get('/teaching', function(request, response) {
-  response.render('pages/teaching');
-});
-
-app.get('/contact-info', function(request, response) {
-  response.render('pages/contact-info');
-});
+// old pages, possibly to be resurrected eventually
+// app.get('/about-me', function(request, response) {
+//   response.render('pages/about-me');
+// });
+// app.get('/cv-resume', function(request, response) {
+//   response.render('pages/cv-resume');
+// });
+// app.get('/teaching', function(request, response) {
+//   response.render('pages/teaching');
+// });
+// app.get('/contact-info', function(request, response) {
+//   response.render('pages/contact-info');
+// });
 
 // run the app
 
