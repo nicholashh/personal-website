@@ -1,5 +1,5 @@
 
-// set-up dependencies
+/* set-up dependencies */
 
 var lessMiddleware = require('less-middleware');
 
@@ -11,27 +11,39 @@ app.set('view engine', 'ejs');
 app.use(lessMiddleware(__dirname + '/public')); // 1
 app.use(express.static(__dirname + '/public')); // 2
 
-// routing information
+/* routing information */
 
+// home page
 app.get('/', function(request, response) {
   response.render('pages/index');
 });
 
-// old pages, possibly to be resurrected eventually
-// app.get('/about-me', function(request, response) {
-//   response.render('pages/about-me');
-// });
-// app.get('/cv-resume', function(request, response) {
-//   response.render('pages/cv-resume');
-// });
-// app.get('/teaching', function(request, response) {
-//   response.render('pages/teaching');
-// });
-// app.get('/contact-info', function(request, response) {
-//   response.render('pages/contact-info');
-// });
+// top navigation bar links
+app.get('/about-me', function(request, response) {
+  response.redirect('http://www.brandeis.edu/departments/philosophy/people/nicholas_hh.html');
+});
+app.get('/resume', function(request, response) {
+  response.redirect('https://github.com/nicholashh/cv-resume-tex/blob/master/nicholas-hanson-holtry.resume.pdf');
+});
+app.get('/cv', function(request, response) {
+  response.redirect('https://github.com/nicholashh/cv-resume-tex/blob/master/nicholas-hanson-holtry.cv.pdf');
+});
+app.get('/github', function(request, response) {
+  response.redirect('https://github.com/nicholashh');
+});
+app.get('/linkedin', function(request, response) {
+  response.redirect('https://www.linkedin.com/in/nicholashh');
+});
+app.get('/facebook', function(request, response) {
+  response.redirect('https://www.facebook.com/nicholashh');
+});
 
-// run the app
+// other miscellaneous links
+app.get('/reading-list', function(request, response) {
+  response.redirect('https://docs.google.com/spreadsheets/d/1Hjb66_jIrcjbeLb4Zr_eDcMUSx8MwH3UZBa_Xg6OQqU/pubhtml?gid=127838593');
+});
+
+/* run the app */
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
