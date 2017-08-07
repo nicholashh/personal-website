@@ -5,6 +5,7 @@ var lessMiddleware = require('less-middleware');
 
 var express = require('express');
 var app = express();
+var fileSystem = require('fs')
 app.set('port', (process.env.PORT || 5000));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
@@ -41,6 +42,14 @@ app.get('/facebook', function(request, response) {
 // other miscellaneous links
 app.get('/reading-list', function(request, response) {
   response.redirect('https://docs.google.com/spreadsheets/d/1Hjb66_jIrcjbeLb4Zr_eDcMUSx8MwH3UZBa_Xg6OQqU/pubhtml?gid=127838593');
+});
+
+// files
+app.get('/statement-of-purpose', function(request, response){
+  fileSystem.readFile('public/files/statement.pdf', function (error, pdf){
+     response.contentType("application/pdf");
+     response.end(pdf);
+  });
 });
 
 /* run the app */
