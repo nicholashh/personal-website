@@ -24,10 +24,10 @@ app.get('/about-me', function(request, response) {
   response.redirect('http://www.brandeis.edu/departments/philosophy/people/nicholas_hh.html');
 });
 app.get('/resume', function(request, response) {
-  response.redirect('https://github.com/nicholashh/cv-resume-tex/blob/master/nicholas-hanson-holtry.resume.pdf');
+  response.redirect('http://nicholashh.github.io/cv-resume-tex/nicholas-hanson-holtry.resume.pdf');
 });
 app.get('/cv', function(request, response) {
-  response.redirect('https://github.com/nicholashh/cv-resume-tex/blob/master/nicholas-hanson-holtry.cv.pdf');
+  response.redirect('http://nicholashh.github.io/cv-resume-tex/nicholas-hanson-holtry.cv.pdf');
 });
 app.get('/github', function(request, response) {
   response.redirect('https://github.com/nicholashh');
@@ -43,12 +43,21 @@ app.get('/facebook', function(request, response) {
 app.get('/reading-list', function(request, response) {
   response.redirect('https://docs.google.com/spreadsheets/d/1Hjb66_jIrcjbeLb4Zr_eDcMUSx8MwH3UZBa_Xg6OQqU/pubhtml?gid=127838593');
 });
+app.get('/phil-ranker', function(request, response) {
+  response.redirect('https://nicholashh.github.io/phil-ranker/');
+});
 
 // files
 app.get('/statement-of-purpose', function(request, response){
-  fileSystem.readFile('public/files/statement.pdf', function (error, pdf){
+  fileSystem.readFile('public/files/statement.pdf', function (error, file){
      response.contentType("application/pdf");
-     response.end(pdf);
+     response.end(file);
+  });
+});
+app.get('/ranker/data-setup.js', function(request, response){
+  fileSystem.readFile('/ranker/data-setup.js', function (error, file){
+     response.contentType("application/javascript");
+     response.end(file);
   });
 });
 
