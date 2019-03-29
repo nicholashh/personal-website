@@ -46,6 +46,9 @@ app.get('/reading-list', function(request, response) {
 app.get('/phil-ranker', function(request, response) {
   response.redirect('https://nicholashh.github.io/phil-ranker/');
 });
+app.get('/gss', function(request, response) {
+  response.redirect('https://docs.google.com/presentation/d/1baSx8FO9Go6fOGWbt7gLT_sQi9IbBSfdetDHV9TXv1U/');
+});
 
 // files
 app.get('/statement-of-purpose', function(request, response){
