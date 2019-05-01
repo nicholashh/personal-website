@@ -49,6 +49,9 @@ app.get('/phil-ranker', function(request, response) {
 app.get('/gss', function(request, response) {
   response.redirect('https://docs.google.com/presentation/d/1baSx8FO9Go6fOGWbt7gLT_sQi9IbBSfdetDHV9TXv1U/');
 });
+app.get('/jen', function(request, response) {
+  response.redirect('https://docs.google.com/presentation/d/1MzXAmlk0PGBLpxAA_rh7jlPVSkxEoUjccaiFMlboKQU/');
+});
 
 // files
 app.get('/statement-of-purpose', function(request, response){
