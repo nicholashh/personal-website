@@ -11,6 +11,8 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(lessMiddleware(__dirname + '/public')); // 1
 app.use(express.static(__dirname + '/public')); // 2
+var favicon = require('serve-favicon');
+app.use(favicon(__dirname + '/public/images/favicon.gif'));
 
 /* routing information */
 
