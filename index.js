@@ -23,7 +23,7 @@ app.get('/', function(request, response) {
 
 // top navigation bar links
 app.get('/about-me', function(request, response) {
-  response.redirect('http://www.brandeis.edu/departments/philosophy/people/nicholas_hh.html');
+  response.redirect('https://philosophy.ucr.edu/Nicholas-Hanson-Holtry/');
 });
 app.get('/resume', function(request, response) {
   response.redirect('http://nicholashh.github.io/cv-resume-tex/nicholas-hanson-holtry.resume.pdf');
@@ -39,6 +39,9 @@ app.get('/linkedin', function(request, response) {
 });
 app.get('/facebook', function(request, response) {
   response.redirect('https://www.facebook.com/nicholashh');
+});
+app.get('/instagram', function(request, response) {
+  response.redirect('https://www.instagram.com/nicholas.hanson.holtry/');
 });
 
 // other miscellaneous links
