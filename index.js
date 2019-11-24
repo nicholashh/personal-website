@@ -37,10 +37,10 @@ app.get('/github', function(request, response) {
 app.get('/linkedin', function(request, response) {
   response.redirect('https://www.linkedin.com/in/nicholashh');
 });
-app.get('/facebook', function(request, response) {
+app.get('/fb', function(request, response) {
   response.redirect('https://www.facebook.com/nicholashh');
 });
-app.get('/instagram', function(request, response) {
+app.get('/insta', function(request, response) {
   response.redirect('https://www.instagram.com/nicholas.hanson.holtry/');
 });
 
