@@ -60,6 +60,9 @@ app.get('/jen', function(request, response) {
 app.get('/keller-1', function(request, response) {
   response.redirect('https://docs.google.com/presentation/d/14x-MfSgynqDXiAwzv4vAuUh9GkBV85DeNIeqq9MZyPc/');
 });
+app.get('/keller-2', function(request, response) {
+  response.redirect('https://docs.google.com/presentation/d/16-8kM6iQtVZDLa4iZW2L_JQTWzHLHE5Ug7IVflAwg4s/');
+});
 
 // files
 app.get('/statement-of-purpose', function(request, response){
