@@ -23,7 +23,8 @@ app.get('/', function(request, response) {
 
 // top navigation bar links
 app.get('/about-me', function(request, response) {
-  response.redirect('https://philosophy.ucr.edu/Nicholas-Hanson-Holtry/');
+  // response.redirect('https://philosophy.ucr.edu/Nicholas-Hanson-Holtry/');
+  response.redirect('https://philosophy.ucr.edu/graduate-students');
 });
 app.get('/resume', function(request, response) {
   response.redirect('http://nicholashh.github.io/cv-resume-tex/nicholas-hanson-holtry.resume.pdf');
