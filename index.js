@@ -64,6 +64,9 @@ app.get('/keller-1', function(request, response) {
 app.get('/keller-2', function(request, response) {
   response.redirect('https://docs.google.com/presentation/d/16-8kM6iQtVZDLa4iZW2L_JQTWzHLHE5Ug7IVflAwg4s/');
 });
+app.get('/keller-3', function(request, response) {
+  response.redirect('https://docs.google.com/presentation/d/1HQDN9Jcs0Fp-ukntswcvD3eUQ8BIDGZv5ur8-AbZwGo/');
+});
 app.get('/coleen-1', function(request, response) {
   response.redirect('https://docs.google.com/presentation/d/1aCrk3Evde0Wf2uYlRs3T2OpX1m7FdDVqIeEsRMLruBw/');
 });
